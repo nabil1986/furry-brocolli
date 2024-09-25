@@ -1,0 +1,180 @@
+/* Conteneur principal */
+.container2 {
+  display: flex;
+}
+
+/* Barre latérale */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+}
+
+.sidebar .nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar .nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar .nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.sidebar .nav ul li a:hover {
+  background-color: #7a1fb3; /* Couleur au survol */
+}
+
+.sidebar .nav ul li a svg {
+  margin-right: 10px;
+}
+
+/* Styles des éléments de la liste */
+li {
+  background: none; /* Suppression de l'arrière-plan pour les éléments de liste */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+li:nth-child(even) {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* Navigation */
+.nav {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.nav a {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* Tableau de bord */
+.dashboard {
+  flex-grow: 1;
+  background-color: #ffffff; /* Arrière-plan blanc pour le tableau de bord */
+}
+
+.dashboard h2 {
+  color: #4a0072; /* Couleur du titre */
+}
+
+/* Indicateurs */
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Pour que les indicateurs se réorganisent sur de petites fenêtres */
+}
+
+.indicator {
+  background-color: #f8f9fa; /* Arrière-plan plus léger pour les indicateurs */
+  border: 1px solid #ced4da;
+  padding: 20px;
+  text-align: center;
+  width: 220px; /* Augmentation de la largeur */
+  border-radius: 10px; /* Coins plus arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin: 10px 0; /* Ajout d'un espace entre les indicateurs */
+}
+
+.lcd-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4a0072; /* Couleur des chiffres */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 2px solid #4a0072;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .indicators {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .indicator {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .sidebar .nav ul li {
+    margin-bottom: 10px;
+    position: relative; /* Assurez-vous que le positionnement est relatif pour le pseudo-élément */
+  }
+
+  .sidebar .nav ul li::before {
+    content: "\2022"; /* Caractère pour l'indicateur (ici, une puce) */
+    color: #ffffff; /* Couleur de l'indicateur */
+    font-weight: bold;
+    font-size: 1.5rem; /* Taille de l'indicateur */
+    position: absolute;
+    left: -25px; /* Positionnez l'indicateur à gauche des éléments de liste */
+    top: 50%;
+    transform: translateY(-50%); /* Centre l'indicateur verticalement */
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar .nav ul li a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .lcd-number {
+    font-size: 36px;
+  }
+
+  .indicator {
+    width: 100%;
+  }
+
+  .dashboard h2 {
+    font-size: 20px;
+  }
+  .sidebar .nav ul li {
+    margin-bottom: 10px;
+    position: relative; /* Assurez-vous que le positionnement est relatif pour le pseudo-élément */
+  }
+
+  .sidebar .nav ul li::before {
+    content: "\2022"; /* Caractère pour l'indicateur (ici, une puce) */
+    color: #ffffff; /* Couleur de l'indicateur */
+    font-weight: bold;
+    font-size: 1.5rem; /* Taille de l'indicateur */
+    position: absolute;
+    left: -25px; /* Positionnez l'indicateur à gauche des éléments de liste */
+    top: 50%;
+    transform: translateY(-50%); /* Centre l'indicateur verticalement */
+  }
+
+}
+
+

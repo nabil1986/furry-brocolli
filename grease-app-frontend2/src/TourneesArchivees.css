@@ -1,0 +1,108 @@
+.date-filter {
+    display: flex;
+      flex-direction: raw; /* Align fields vertically */
+      align-items: center;    /* Center content horizontally */
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f7f9fc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      margin: auto;
+}
+
+.date-field {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;  /* Ensure the width includes padding and border */
+  transition: border-color 0.3s ease;
+}
+
+.date-field:focus {
+  border-color: #007bff;  /* Change border color when focused */
+  outline: none;
+}
+
+
+/* Container for the table to center it */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  box-shadow: 0 2px 15px rgba(64, 64, 64, 0.1);
+}
+
+/* Table header style */
+thead tr {
+  background-color: #007bff; /* Header background color */
+  color: white;
+  text-align: left;
+}
+
+/* Table cells */
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table {
+    font-size: 16px;
+  }
+}
+
+/* Optional: Add some spacing between cells for a cleaner look */
+.abc {
+  padding: 10px;
+}
+
+
+
+.export-buttons {
+        display: flex;          /* Utilise Flexbox pour l'alignement */
+          justify-content: center; /* Centre les éléments horizontalement */
+          align-items: center;     /* Centre les éléments verticalement */
+          padding: 10 10px; /* Ajoute un espace entre les boutons */
+          margin-top: 10px;
+      }
+.colExcel {
+        margin: 10 10px; /* Ajoute un espace entre les boutons */
+}
+
+
+@media (max-width: 768px) {
+   .abc {
+        width: 100%; /* S'assure que chaque élément prend toute la largeur de l'écran */
+      }
+      .export-buttons {
+              display: flex;          /* Utilise Flexbox pour l'alignement */
+                justify-content: center; /* Centre les éléments horizontalement */
+                align-items: center;     /* Centre les éléments verticalement */
+                padding: 10 10px; /* Ajoute un espace entre les boutons */
+                margin-top: 10px;
+            }
+      .colExcel {
+              margin: 10 10px; /* Ajoute un espace entre les boutons */
+      }
+ }

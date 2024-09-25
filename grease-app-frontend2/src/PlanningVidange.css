@@ -1,0 +1,119 @@
+/* Container principal pour la mise en page */
+.main-container {
+  display: flex;
+  height: 100vh;
+  align-items: center; /* Centre les éléments horizontalement */
+}
+
+h2 {
+   text-align: center;
+}
+
+.recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Styles pour la barre de progression */
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+}
+
+.progress-container {
+    align-items: center; /* Centre les éléments horizontalement */
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+.progress-label {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.progress-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center; /* Centre la barre de progression */
+}
+
+.progress-bar-background {
+  width: 100%;
+  max-width: 600px; /* Limite la largeur de la barre de progression */
+  background-color: #ddd; /* Couleur de fond de la barre de progression */
+  position: relative;
+  border-radius: 5px; /* Coins arrondis */
+  overflow: hidden; /* Cache les débordements */
+  min-height: 2rem;
+}
+
+.progress-bar-fill {
+  height: 20px; /* Hauteur de la barre de progression */
+  background-color: #00F; /* Couleur de la barre de progression */
+  text-align: center;
+  line-height: 20px; /* Aligne le texte verticalement */
+  color: white;
+  border-radius: 5px 0 0 5px; /* Coins arrondis uniquement à gauche */
+  position: relative;
+  min-height: 2rem;
+}
+
+.progress-label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centre le texte verticalement */
+}
+
+.export-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.colExcel {
+  display: flex;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne des éléments */
+  gap: 20px;
+  flex-direction: row; /* Aligne les éléments horizontalement */
+}
+
+.device-photo-planning {
+   max-width: 300px;
+   height: auto; /* Maintient le ratio d'aspect */
+   display: block; /* Assure que l'image s'affiche correctement */
+   margin: 0 auto; /* Centre l'image si besoin */
+ }
+
+ /* Styles spécifiques pour les petits écrans */
+ @media (max-width: 768px) {
+   .conteneur-principal {
+     padding: 5px;
+   }
+
+   .conteneur-colonnes {
+     flex-direction: column;
+   }
+
+   .carte-details {
+     padding: 10px;
+   }
+
+   .colonne {
+     width: 100%; /* S'assure que chaque élément prend toute la largeur de l'écran */
+   }
+   .abc {
+        width: 100%; /* S'assure que chaque élément prend toute la largeur de l'écran */
+      }
+ }

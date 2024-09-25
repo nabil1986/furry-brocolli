@@ -1,0 +1,21 @@
+#colB {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#colC {
+  flex: 1;
+  min-width: 150px; /* Adjust the minimum width for small screens */
+  margin: 5px; /* Add margin to space the buttons */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  #colC {
+    min-width: 300px; /* Reduce button width on small screens */
+  }
+}

@@ -1,0 +1,282 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Assure que padding et border sont inclus dans la largeur totale */
+}
+
+.container {
+  height: auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea, button, select {
+  width: 100%;
+  height: 40px;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-color: #007bff;
+  border-width: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.5rem; /* Ajusté pour plus de flexibilité */
+}
+
+button {
+  background: #640097;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.75rem; /* Ajusté pour plus de confort */
+}
+
+button:hover {
+  background-color: #8a43bf;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+li:nth-child(even) {
+  background: #efefef;
+}
+
+.nav {
+  background-color: #007bff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet aux éléments de se placer sur plusieurs lignes si nécessaire */
+}
+
+.nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 1rem;
+  box-sizing: border-box; /* Assure que le padding est inclus dans la hauteur totale */
+}
+
+.auth-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 0; /* Supprimé la marge pour centrer correctement */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: auto;
+  height: 15rem; /* Ajusté pour les grands écrans */
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 15px; /* Réduit le padding pour les écrans moyens */
+  }
+
+  .auth-form {
+    padding: 1.5rem; /* Réduit le padding pour les écrans moyens */
+  }
+
+  .nav a {
+    font-size: 16px; /* Ajuste la taille du texte pour les écrans moyens */
+  }
+
+  .logo img {
+    height: 12rem; /* Ajuste la hauteur du logo pour les écrans moyens */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0; /* Supprime le padding pour les petits écrans */
+  }
+
+  .container {
+    padding: 10px; /* Réduit le padding pour les petits écrans */
+  }
+
+  .auth-container {
+    padding: 0; /* Supprime le padding pour les petits écrans */
+  }
+
+  .auth-form {
+    padding: 1rem; /* Réduit le padding pour les petits écrans */
+    margin: 0 auto; /* Centrer le formulaire */
+  }
+
+  .nav {
+    padding: 5px; /* Réduit le padding pour les petits écrans */
+    flex-direction: column; /* Les liens de navigation s'empilent sur les petits écrans */
+  }
+
+  .nav a {
+    font-size: 14px; /* Réduit la taille du texte pour les petits écrans */
+    margin: 5px 0; /* Réduit l'espace entre les liens */
+  }
+
+  .logo img {
+    height: 10rem; /* Ajuste la hauteur du logo pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    padding: 0.5rem; /* Réduit le padding des boutons pour les très petits écrans */
+    max-width: 350px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  textarea {
+    padding: 0.5rem; /* Réduit le padding des champs de formulaire pour les très petits écrans */
+    max-width: 350px;
+  }
+}
+
+
+/* Style général pour la table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+thead {
+  background-color: #f8f9fa;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive design for tablets and smartphones */
+@media (max-width: 768px) {
+  /* Make the table scrollable horizontally on small screens */
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    border: 0;
+  }
+
+  thead {
+    display: none; /* Hide table headers on small screens */
+  }
+
+  tbody, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  /* Adjust padding for smaller screens */
+  td, th {
+    padding: 10px;
+  }
+}
